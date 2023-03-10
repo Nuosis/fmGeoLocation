@@ -23,3 +23,6 @@ At this point you should see the web viewer on the layout load up with the HTML 
 
 ## Use this kit
 Now you're ready to use this kit to create awesome JS widgets.
+
+## Geolocation 
+See https://www.proofgeist.com/blog/2020/05/22/get-geolocation-data-for-fun-and-profit-in-filemaker-webdirect
