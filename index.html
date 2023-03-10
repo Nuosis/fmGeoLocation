@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <style>
-      @import "./src/style.css";
-    </style>
-    <title>JSDev</title>
-  </head>
-  <body>
-    <h1>Alright. You're set.</h1>
-    <h2>Now build something amazing!</h2>
-    <button type="button">Click Me!</button>
+<html>
+<body>
 
-    <script type="module">
-      import "./src/index.js";
-    </script>
-  </body>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
 </html>
